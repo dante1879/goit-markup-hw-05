@@ -303,9 +303,11 @@ ul.what-we-do-list > .item:not(:last-child) {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 70px;
 
-  padding-top: 27px;
-  padding-bottom: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 
   color: var(--text-full-white);
@@ -612,6 +614,7 @@ ul.works > .item:nth-last-child(-n + 3) {
 }
 
 .works-list .item-link {
+  display: block;
   transition: box-shadow 250ms var(--cubic_animation);
 }
 
@@ -621,9 +624,6 @@ ul.works > .item:nth-last-child(-n + 3) {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.works-list .item-link {
-  display: block;
-}
 
 .portfolio-thumb {
   position: relative;
@@ -645,7 +645,8 @@ ul.works > .item:nth-last-child(-n + 3) {
   transition: transform 250ms var(--cubic_animation);
 }
 
-.works-list > .item:hover .portfolio-overlay {
+.works-list .item-link:hover .portfolio-overlay,
+.works-list .item-link:focus .portfolio-overlay {
   transform: translateY(0);
 }
 
@@ -674,15 +675,15 @@ ul.works > .item:nth-last-child(-n + 3) {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9)
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.0);
-  
+  transform: translate(-50%, -50%) scale(1);
+
   height: 581px;
   width: 528px;
 
@@ -706,6 +707,5 @@ ul.works > .item:nth-last-child(-n + 3) {
 }
 
 .close-svg {
-  fill:#000000
+  fill: #000000;
 }
-
