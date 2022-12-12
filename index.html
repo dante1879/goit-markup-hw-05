@@ -64,7 +64,9 @@
         <div class="overlay">
           <div class="container">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="hero-button">Замовити послугу</button>
+            <button type="button" class="hero-button" data-modal-open="">
+              Замовити послугу
+            </button>
           </div>
         </div>
       </section>
@@ -129,12 +131,15 @@
           <ul class="what-we-do-list list">
             <li class="item">
               <img src="./images/img_1.jpg" alt="Комьютер" width="370" />
+              <p class="what-we-do-desc">Десктопні додатки</p>
             </li>
             <li class="item">
               <img src="./images/img_2.jpg" alt="Телефон" width="370" />
+              <p class="what-we-do-desc">Мобільні додатки</p>
             </li>
             <li class="item">
               <img src="./images/img_3.jpg" alt="Планшет" width="370" />
+              <p class="what-we-do-desc">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -429,5 +434,16 @@
         </div>
       </div>
     </footer>
+    <!--MODAL-WINDOW-->
+    <div class="backdrop is-hidden" data-modal="">
+      <div class="modal">
+        <button type="button" class="modal-close-button" data-modal-close="">
+          <svg width="18" height="18" class="close-svg">
+            <use href="./images/sprite.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
